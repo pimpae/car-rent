@@ -39,10 +39,10 @@
 							<a class="nav-link" aria-current="page" href="#">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"> รุ่นรถ </a>
+							<a class="nav-link" href="#car"> รุ่นรถ </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">เช่ารถพร้อมคนขับ</a>
+							<a class="nav-link" href="#about">เกี่ยวกับเรา</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">ติดต่อเรา</a>
@@ -79,40 +79,58 @@
 		<div class="cover-form">
 			<div class="container">
 				<div class="row h-100 d-flex align-items-center">
-					<div class="col-lg-6">
-						<div class="form-car">
+					<div class="col-lg-12 position-relative">
+
+						<div class="book-box">
+							<div>
+								<h1>บริการ เช่ารถยนต์</h1>
+								<h4> บริการ เช่ารถยนต์ เช่ารถดอนเมือง เช่ารถราคาถูก</h4>
+								<br><br>
+								<button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">BOOKING NOW</button>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- The Modal -->
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-xl ">
+				<div class="modal-content"> 
+					<div class="modal-body"> 
+						<div class="form-car ">
 							<h4>CAR BOOKING FORM</h4>
 							<form>
 								<div class="form-group row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>Fullname</label>
 										<input type="text" class="form-control"> 
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>Email</label>
+										<input type="text" class="form-control"> 
+									</div>
+									<div class="col-lg-4">
+										<label>Phone No.</label>
 										<input type="text" class="form-control"> 
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-lg-6">
-										<label>Phone No.</label>
-										<input type="text" class="form-control"> 
-									</div>
-									<div class="col-lg-6 position-relative"> 
+									<div class="col-lg-4 position-relative"> 
 										<label for="date1">Booking Date
 											<span class="material-symbols-outlined icon-span2  ">
 												calendar_month
 											</span>
 										</label>  
 										<input type="text" class="form-control date" id="date1">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-lg-6">
+									</div> 
+									<div class="col-lg-4">
 										<label>Fight No.</label>
 										<input type="text" class="form-control"> 
+										<small>* In case of airport transfer</small>
 									</div>
-									<div class="col-lg-6 position-relative"> 
+									<div class="col-lg-4 position-relative"> 
 										<label for="timePicker">Pick Up Time
 											<span class="material-symbols-outlined icon-span2  ">
 												Schedule
@@ -122,117 +140,192 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>Pick Up At</label>
-										<select class="js-example-basic-multiple">
-											<option value="">Pick Up</option>
-											<option value="">Pick Up</option>
-											<option value="">Pick Up</option>
-											<option value="">Pick Up</option>
-										</select>
+										<input type="text" class="form-control">
+										<small>* Please provides location name or GoogleMap Link</small>
 									</div>
-									<div class="col-lg-6 position-relative"> 
+									<div class="col-lg-4 position-relative"> 
 										<label>Drop Up At</label>  
-										<select class="js-example-basic-multiple">
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
-										</select>
+										<input type="text" class="form-control">
+										<small>* Please provides destination name or GoogleMap Link</small>
 									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>Vehicle </label>
-										<select class="js-example-basic-multiple">
+										<select class="form-control">
 											<option value="">Vehicle</option>
 											<option value="">Vehicle</option>
 											<option value="">Vehicle</option>
 											<option value="">Vehicle</option>
-										</select>
-									</div>
-									<div class="col-lg-6 position-relative"> 
-										<label>Note</label>  
-										<select class="js-example-basic-multiple">
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
-											<option value="">Drop Up</option>
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>OTHER REQUIREMENTS </label>
-										<select class="js-example-basic-multiple">
-											<option value="">Need Chinese speaking tour guide</option>
-											<option value="">Need Chinese speaking driver</option>
-											<option value="">Need English speaking driver</option>
-											<option value="">Need a baby car seat in a car</option>
-											<option value="">Able to smoke cigarettes in a car</option>
-											<option value="">Able to drink alcohol in a car</option>
-											<option value="">Able to bring pet with a case in a car</option>
-											<option value="">อื่นๆ:</option>
-										</select>
-									</div>
-									<div class="col-lg-6 position-relative"> 
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+											<label class="form-check-label" for="flexCheckDefault">
+											Need Chinese speaking tour guide
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need Chinese speaking driver
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need English speaking driver
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need a baby car seat in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to smoke cigarettes in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to drink alcohol in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to bring pet with a case in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												อื่นๆ
+											</label>
+										</div>
+									</div> 
+									<div class="col-lg-4 position-relative"> 
 										<label>PAYMENT OPTIONS*</label>  
-										<select class="js-example-basic-multiple">
-											<option value="">Cash</option>
-											<option value="">Transfer money via Bank Account</option>
-											<option value="">VISA/Credit card</option> 
-										</select>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												Cash
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												Transfer money via Bank Account
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												VISA/Credit card
+											</label>
+										</div>  
 									</div>
-								</div>  
-								<div class="form-group row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<label>PREFERS CONTACT CHANNEL </label>
-										<select class="js-example-basic-multiple">
-											<option value="">Facebook message</option> 
-											<option value="">Instagram message</option> 
-											<option value="">Line Official Account</option> 
-											<option value="">Whatsapp</option> 
-											<option value="">WeChat</option> 
-											<option value="">อื่นๆ:</option> 
-										</select>
-									</div>
-									<div class="col-lg-6 position-relative"> 
-										<label>Contact Detail</label>  
-										<input type="text" class="form-control"> 
-									</div>
-								</div> 
-								<div class="form-group row">
-									<div class="col-lg-6">
-										<label>Photo of you </label>
-										<select class="js-example-basic-multiple">
-											<option value="">Facebook message</option> 
-											<option value="">Instagram message</option> 
-											<option value="">Line Official Account</option> 
-											<option value="">Whatsapp</option> 
-											<option value="">WeChat</option> 
-											<option value="">อื่นๆ:</option> 
-										</select>
-									</div>
-									<div class="col-lg-6 position-relative"> 
-										<label>Contact Detail</label>  
-										<input type="file" class="form-control"> 
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Facebook message</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Instagram message</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Line Official Account</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Whatsapp</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">WeChat</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">อื่นๆ:</label>
+										</div>   
+										<small>Please tell us which <b>contact channels</b> are best for communicating with you.</small>
 									</div>
 								</div> 
 
-								<button class="btn">  
-									<span class="material-symbols-outlined">search</span>ค้นหา
-								</button>
+								<div class="form-group row">
+									<div class="col-lg-8 position-relative"> 
+										<label>TRAVEL TYPES</label>  
+										<select class="form-control">
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+										</select> 
+										<ul>
+											<li>Note : - In Bangkok areas, prices are net (includes fuel & toll way)</li>
+											<li>- For traveling outside Bangkok, please pay for your own fuel expenses.</li>
+											<li>- For traveling outside Bangkok more than 1 day, need to pay 500B/day for a driver's accommodation.</li>
+										</ul> 
+									</div>   
+								</div>
+ 
+
+								<div class="form-group row"> 
+									<div class="col-lg-8 position-relative"> 
+										<label>Contact Detail</label>  
+										<input type="text" class="form-control"> 
+										<small>
+											Please tell us your "Facebook name/ Instagram Name / Line ID, LINE name / Whatsapp
+											number or WeChat ID', so we can contact you back with your prefers contact channel.
+										</small>
+									</div> 
+									<div class="col-lg-4 position-relative"> 
+										<label>PHOTO OF YOU</label>  
+										<input type="file" class="form-control">  
+										<small>Please help us easily find you</small>
+									</div> 
+								</div>
+
+								<div class="form-group row"> 
+									<div class="col-lg-12 position-relative"> 
+										<label>NOTES</label>  
+										<input type="text" class="form-control"> 
+										<small>If you have any other requirement please feel free to write it.</small>
+									</div>  
+								</div>
+
+
+								<hr>
+
+
+								<div class="form-group row justify-content-center">
+									<div class="col-lg-4 col-12">
+										<button class="btn"> Booking Now </button>
+									</div> 
+								</div> 
+
 								
 							</form>
-						</div>
-					</div>
+						</div> 
+					</div> 
 				</div>
 			</div>
 		</div>
 
-		<section class="bg1">
+		<section class="bg1" id="car">
 			<div class="container my-car">
-				<h1>รถเช่ายอดนิยมของ   </h1>
+				<h1 >รถเช่ายอดนิยมของ   </h1>
 	
 				<div class="row">
 					<div class="col-lg-3 col-12">
@@ -328,9 +421,9 @@
 			</div>
 		</section>
 
-		<section  >
+		<section  id="about">
 			<div class="container my-car ">
-				<h1>เกี่ยวกับเรา   </h1>
+				<h1 >เกี่ยวกับเรา   </h1>
 	
 				<div class="row"> 
 					<div class="col-lg-6">

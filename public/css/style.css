@@ -46,12 +46,65 @@ main{
   padding-top: 80px;
 }
 .cover-form{
-  height: 900px;
+  height: 600px;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: 100% auto !important;
   background: url(../images/qq.jpg);
   position: relative;
+}
+.cover-form::after{
+  content: "";
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.book-box{ 
+  position: absolute;
+  z-index: 5; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 600px;
+  width: 100%; 
+}
+.book-box h1{ 
+  color: #fff;
+  font-size: 50px; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+.book-box h4{ 
+  color: #fff;
+  font-size: 20px;
+  text-align: center; 
+  margin-bottom: 30px;
+}
+.book-box h4{ 
+  color: #fff;
+  font-size: 20px;
+  text-align: center; 
+}
+.book-box .btn{ 
+  background-color: var(--bg-main); 
+  color: #fff;
+  margin-top: 20px;
+  position: relative;
+  padding: 15px 60px;
+  text-align: center;
+  display: block;
+  margin: 20px auto 0px;
+}
+.book-box .btn:hover{ 
+  background-color: var(--bg-main3); 
+  color: #fff; 
+}
+.book-box .btn span{ 
+  position: relative;
+  top: 5px;
+  font-size: 18px;
 }
 .form-car{ 
   /* background: rgba(255, 255, 255, 0.7);
@@ -61,9 +114,7 @@ main{
   -webkit-backdrop-filter: blur(12.1px);
   border: 1px solid rgba(255, 255, 255, 0.57); */
   background-color: #fff;
-  border: 3px solid var(--bg-main);
-
-  margin-top: 35px;
+  border: 3px solid var(--bg-main); 
   border-radius: 10px;
   padding: 30px;  
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  
@@ -97,6 +148,23 @@ main{
   position: relative;
   top: 5px;
   font-size: 18px;
+}
+.form-car small{  
+  font-size: 12px; 
+}
+.form-car ul{  
+  padding-left: 0px;
+  list-style: none;
+}
+.form-car ul li{  
+  font-size: 12px;
+  padding-left: 39px;
+}
+.form-car ul li:nth-child(1){  
+  padding-left: 0px;
+}
+.form-check label{
+  margin-top: 0px;
 }
 
 
