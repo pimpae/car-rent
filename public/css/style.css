@@ -52,6 +52,9 @@ main{
   background-size: 100% auto !important;
   background: url(../images/qq.jpg);
   position: relative;
+} 
+.cover-form.hi2{
+  height: 300px; 
 }
 .cover-form::after{
   content: "";
@@ -69,6 +72,9 @@ main{
   align-items: center; 
   height: 600px;
   width: 100%; 
+}
+.book-box.hi2{  
+  height: 300px; 
 }
 .book-box h1{ 
   color: #fff;

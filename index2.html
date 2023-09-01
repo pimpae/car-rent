@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Car Rent </title>
+	<link rel="icon" type="image/x-icon" href="public/images/LogoLXBfinal01.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css" />      
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"/>  
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />  
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+ 
+
+
+</head>
+<body> 
+
+	<header>
+		<nav class="navbar fixed-top navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="public/images/LogoLXBfinal01.png" class="img-responsive">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#car"> รุ่นรถ </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">เกี่ยวกับเรา</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">ติดต่อเรา</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pl" href="tel:99999">
+								<span class="material-symbols-outlined">
+									call
+								</span> +020-999-0019
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="public/images/f.png" alt="">
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="public/images/l.png" alt="">
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="public/images/x.webp" alt="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="cover-form hi2">
+			<div class="container">
+				<div class="row h-100 d-flex align-items-center">
+					<div class="col-lg-12 position-relative">
+
+						<div class="book-box hi2">
+							<div>
+								<h1>บริการ เช่ารถยนต์</h1>
+								<h4> บริการ เช่ารถยนต์ เช่ารถดอนเมือง เช่ารถราคาถูก</h4>
+								<!-- <br><br>
+								<button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">BOOKING NOW</button> -->
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section>
+			<div class="container pt-5 pb-5">
+				<div class="form-car ">
+					<h4>CAR BOOKING FORM</h4>
+					<form>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<label>Fullname</label>
+								<input type="text" class="form-control"> 
+							</div>
+							<div class="col-lg-4">
+								<label>Email</label>
+								<input type="text" class="form-control"> 
+							</div>
+							<div class="col-lg-4">
+								<label>Phone No.</label>
+								<input type="text" class="form-control"> 
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4 position-relative"> 
+								<label for="date1">Booking Date
+									<span class="material-symbols-outlined icon-span2  ">
+										calendar_month
+									</span>
+								</label>  
+								<input type="text" class="form-control date" id="date1">
+							</div> 
+							<div class="col-lg-4">
+								<label>Fight No.</label>
+								<input type="text" class="form-control"> 
+								<small>* In case of airport transfer</small>
+							</div>
+							<div class="col-lg-4 position-relative"> 
+								<label for="timePicker">Pick Up Time
+									<span class="material-symbols-outlined icon-span2  ">
+										Schedule
+									</span>
+								</label>  
+								<input type="time" class="form-control" id="timePicker">  
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<label>Pick Up At</label>
+								<input type="text" class="form-control">
+								<small>* Please provides location name or GoogleMap Link</small>
+							</div>
+							<div class="col-lg-4 position-relative"> 
+								<label>Drop Up At</label>  
+								<input type="text" class="form-control">
+								<small>* Please provides destination name or GoogleMap Link</small>
+							</div>
+							<div class="col-lg-4">
+								<label>Vehicle </label>
+								<select class="form-control">
+									<option value="">Vehicle</option>
+									<option value="">Vehicle</option>
+									<option value="">Vehicle</option>
+									<option value="">Vehicle</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<label>OTHER REQUIREMENTS </label>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									<label class="form-check-label" for="flexCheckDefault">
+									Need Chinese speaking tour guide
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Need Chinese speaking driver
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Need English speaking driver
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Need a baby car seat in a car
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Able to smoke cigarettes in a car
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Able to drink alcohol in a car
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										Able to bring pet with a case in a car
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+									<label class="form-check-label" for="flexCheckChecked">
+										อื่นๆ
+									</label>
+								</div>
+							</div> 
+							<div class="col-lg-4 position-relative"> 
+								<label>PAYMENT OPTIONS*</label>  
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+									<label class="form-check-label" for="flexCheckChecked2">
+										Cash
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+									<label class="form-check-label" for="flexCheckChecked2">
+										Transfer money via Bank Account
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+									<label class="form-check-label" for="flexCheckChecked2">
+										VISA/Credit card
+									</label>
+								</div>  
+							</div>
+							<div class="col-lg-4">
+								<label>PREFERS CONTACT CHANNEL </label>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">Facebook message</label>
+								</div>   
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">Instagram message</label>
+								</div>   
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">Line Official Account</label>
+								</div>   
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">Whatsapp</label>
+								</div>   
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">WeChat</label>
+								</div>   
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+									<label class="form-check-label" for="flexCheckChecked3">อื่นๆ:</label>
+								</div>   
+								<small>Please tell us which <b>contact channels</b> are best for communicating with you.</small>
+							</div>
+						</div> 
+	
+						<div class="form-group row">
+							<div class="col-lg-8 position-relative"> 
+								<label>TRAVEL TYPES</label>  
+								<select class="form-control">
+									<option value="">Drop Up</option>
+									<option value="">Drop Up</option>
+									<option value="">Drop Up</option>
+									<option value="">Drop Up</option>
+								</select> 
+								<ul>
+									<li>Note : - In Bangkok areas, prices are net (includes fuel & toll way)</li>
+									<li>- For traveling outside Bangkok, please pay for your own fuel expenses.</li>
+									<li>- For traveling outside Bangkok more than 1 day, need to pay 500B/day for a driver's accommodation.</li>
+								</ul> 
+							</div>   
+						</div>
+	
+	
+						<div class="form-group row"> 
+							<div class="col-lg-8 position-relative"> 
+								<label>Contact Detail</label>  
+								<input type="text" class="form-control"> 
+								<small>
+									Please tell us your "Facebook name/ Instagram Name / Line ID, LINE name / Whatsapp
+									number or WeChat ID', so we can contact you back with your prefers contact channel.
+								</small>
+							</div> 
+							<div class="col-lg-4 position-relative"> 
+								<label>PHOTO OF YOU</label>  
+								<input type="file" class="form-control">  
+								<small>Please help us easily find you</small>
+							</div> 
+						</div>
+	
+						<div class="form-group row"> 
+							<div class="col-lg-12 position-relative"> 
+								<label>NOTES</label>  
+								<input type="text" class="form-control"> 
+								<small>If you have any other requirement please feel free to write it.</small>
+							</div>  
+						</div>
+	
+	
+						<hr>
+	
+	
+						<div class="form-group row justify-content-center">
+							<div class="col-lg-4 col-12">
+								<button class="btn"> Booking Now </button>
+							</div> 
+						</div> 
+	
+						
+					</form>
+				</div> 
+			</div>
+		</section>
+
+		<!-- The Modal -->
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-xl ">
+				<div class="modal-content"> 
+					<div class="modal-body"> 
+						<div class="form-car ">
+							<h4>CAR BOOKING FORM</h4>
+							<form>
+								<div class="form-group row">
+									<div class="col-lg-4">
+										<label>Fullname</label>
+										<input type="text" class="form-control"> 
+									</div>
+									<div class="col-lg-4">
+										<label>Email</label>
+										<input type="text" class="form-control"> 
+									</div>
+									<div class="col-lg-4">
+										<label>Phone No.</label>
+										<input type="text" class="form-control"> 
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-lg-4 position-relative"> 
+										<label for="date1">Booking Date
+											<span class="material-symbols-outlined icon-span2  ">
+												calendar_month
+											</span>
+										</label>  
+										<input type="text" class="form-control date" id="date1">
+									</div> 
+									<div class="col-lg-4">
+										<label>Fight No.</label>
+										<input type="text" class="form-control"> 
+										<small>* In case of airport transfer</small>
+									</div>
+									<div class="col-lg-4 position-relative"> 
+										<label for="timePicker">Pick Up Time
+											<span class="material-symbols-outlined icon-span2  ">
+												Schedule
+											</span>
+										</label>  
+										<input type="time" class="form-control" id="timePicker">  
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-lg-4">
+										<label>Pick Up At</label>
+										<input type="text" class="form-control">
+										<small>* Please provides location name or GoogleMap Link</small>
+									</div>
+									<div class="col-lg-4 position-relative"> 
+										<label>Drop Up At</label>  
+										<input type="text" class="form-control">
+										<small>* Please provides destination name or GoogleMap Link</small>
+									</div>
+									<div class="col-lg-4">
+										<label>Vehicle </label>
+										<select class="form-control">
+											<option value="">Vehicle</option>
+											<option value="">Vehicle</option>
+											<option value="">Vehicle</option>
+											<option value="">Vehicle</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-lg-4">
+										<label>OTHER REQUIREMENTS </label>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+											<label class="form-check-label" for="flexCheckDefault">
+											Need Chinese speaking tour guide
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need Chinese speaking driver
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need English speaking driver
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Need a baby car seat in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to smoke cigarettes in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to drink alcohol in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												Able to bring pet with a case in a car
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+											<label class="form-check-label" for="flexCheckChecked">
+												อื่นๆ
+											</label>
+										</div>
+									</div> 
+									<div class="col-lg-4 position-relative"> 
+										<label>PAYMENT OPTIONS*</label>  
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												Cash
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												Transfer money via Bank Account
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+											<label class="form-check-label" for="flexCheckChecked2">
+												VISA/Credit card
+											</label>
+										</div>  
+									</div>
+									<div class="col-lg-4">
+										<label>PREFERS CONTACT CHANNEL </label>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Facebook message</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Instagram message</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Line Official Account</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">Whatsapp</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">WeChat</label>
+										</div>   
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+											<label class="form-check-label" for="flexCheckChecked3">อื่นๆ:</label>
+										</div>   
+										<small>Please tell us which <b>contact channels</b> are best for communicating with you.</small>
+									</div>
+								</div> 
+
+								<div class="form-group row">
+									<div class="col-lg-8 position-relative"> 
+										<label>TRAVEL TYPES</label>  
+										<select class="form-control">
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+											<option value="">Drop Up</option>
+										</select> 
+										<ul>
+											<li>Note : - In Bangkok areas, prices are net (includes fuel & toll way)</li>
+											<li>- For traveling outside Bangkok, please pay for your own fuel expenses.</li>
+											<li>- For traveling outside Bangkok more than 1 day, need to pay 500B/day for a driver's accommodation.</li>
+										</ul> 
+									</div>   
+								</div>
+ 
+
+								<div class="form-group row"> 
+									<div class="col-lg-8 position-relative"> 
+										<label>Contact Detail</label>  
+										<input type="text" class="form-control"> 
+										<small>
+											Please tell us your "Facebook name/ Instagram Name / Line ID, LINE name / Whatsapp
+											number or WeChat ID', so we can contact you back with your prefers contact channel.
+										</small>
+									</div> 
+									<div class="col-lg-4 position-relative"> 
+										<label>PHOTO OF YOU</label>  
+										<input type="file" class="form-control">  
+										<small>Please help us easily find you</small>
+									</div> 
+								</div>
+
+								<div class="form-group row"> 
+									<div class="col-lg-12 position-relative"> 
+										<label>NOTES</label>  
+										<input type="text" class="form-control"> 
+										<small>If you have any other requirement please feel free to write it.</small>
+									</div>  
+								</div>
+
+
+								<hr>
+
+
+								<div class="form-group row justify-content-center">
+									<div class="col-lg-4 col-12">
+										<button class="btn"> Booking Now </button>
+									</div> 
+								</div> 
+
+								
+							</form>
+						</div> 
+					</div> 
+				</div>
+			</div>
+		</div>
+
+		<section class="bg1" id="car">
+			<div class="container my-car">
+				<h1 >รถเช่ายอดนิยมของ   </h1>
+	
+				<div class="row">
+					<div class="col-lg-3 col-12">
+						<div class="car">
+							<img src="public/images/c1.jpg" alt="">
+							<a href="#" class="link">
+								<h3>Nissan Almera</h3>
+								<h5>Nissan</h5>
+							</a>
+							<h2>฿ 1,819 / Day </h2>
+							<div class="row">
+								<div class="col-6 pe-1">
+									<a href="#" class="btn">
+										Book Now
+									</a> 
+								</div>
+								<div class="col-6 ps-1">
+									<a href="#" class="btn btn2">
+										Details
+									</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-12">
+						<div class="car">
+							<img src="public/images/c2.jpg" alt="">
+							<a href="#" class="link">
+								<h3>Nissan Almera</h3>
+								<h5>Nissan</h5>
+							</a>
+							<h2>฿ 1,819 / Day </h2>
+							<div class="row">
+								<div class="col-6 pe-1">
+									<a href="#" class="btn">
+										Book Now
+									</a> 
+								</div>
+								<div class="col-6 ps-1">
+									<a href="#" class="btn btn2">
+										Details
+									</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-12">
+						<div class="car">
+							<img src="public/images/c3.jpg" alt="">
+							<a href="#" class="link">
+								<h3>Nissan Almera</h3>
+								<h5>Nissan</h5>
+							</a>
+							<h2>฿ 1,819 / Day </h2>
+							<div class="row">
+								<div class="col-6 pe-1">
+									<a href="#" class="btn">
+										Book Now
+									</a> 
+								</div>
+								<div class="col-6 ps-1">
+									<a href="#" class="btn btn2">
+										Details
+									</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-12">
+						<div class="car">
+							<img src="public/images/c4.jpg" alt="">
+							<a href="#" class="link">
+								<h3>Nissan Almera</h3>
+								<h5>Nissan</h5>
+							</a>
+							<h2>฿ 1,819 / Day </h2>
+							<div class="row">
+								<div class="col-6 pe-1">
+									<a href="#" class="btn">
+										Book Now
+									</a> 
+								</div>
+								<div class="col-6 ps-1">
+									<a href="#" class="btn btn2">
+										Details
+									</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</section>
+
+		<section  id="about">
+			<div class="container my-car ">
+				<h1 >เกี่ยวกับเรา   </h1>
+	
+				<div class="row"> 
+					<div class="col-lg-6">
+						<img src="public/images/qq.jpg" class="img-fluid m-auto d-block bro">
+					</div>
+					<div class="col-lg-6">
+						<h4>มาเช่ารถขับเอง กับ ECOCAR rent-a-car</h4>  
+	
+						<br>
+	
+						<p>
+							ECOCAR rent-a-car ของเรา มีให้บริการรถเช่าทั้งรถเช่าขับเอง และบริการรถเช่าพร้อมคนขับ หรือ รถรับส่งสนามบิน เพื่อนำคุณเดินทางไปสู่จุดหมายอย่างปลอดภัย และทันเวลาที่กำหนด สำหรับ การเช่ารถขับเอง ของ ECOCAR rent-a-car ที่พร้อมให้บริการทุกคน <br> <br>
+	
+							<b>บริการรถเช่าแบบไหนให้เลือกบ้าง ?</b>
+							ECOCAR rent-a-car ของเรา มีให้บริการรถเช่าทั้งรถเช่าแบบขับเอง และบริการรถเช่าพร้อมคนขับ กรณีที่ลูกค้าทำการจองรถกับเราเสร็จสิ้น (จองรถผ่านไลน์ 24 ชม. คลิก) ลูกค้าสามารถรับรถได้ที่สนามบิน เรามีทีมงานไว้คอยบริการรับ-ส่งรถให้ฟรีไม่เสียค่าบริการ แต่ถ้าลูกค้าต้องการที่จะรับ-ส่งรถนอกสถานที่ เรามีอัตตราค่าบริการเพิ่มแค่ 500 บาทเท่านั้น ไม่ว่าจะเป็น โรงแรม หรือ เกสต์เฮาส์ เราพร้อมบริการ รถพร้อมใช้งาน ตรงต่อเวลา มั่นใจได้เลย  <br> <br>
+	
+							<b>เช่ารถขับเอง มีราคาเท่าไหร่บ้าง? </b> <br> <br>
+	
+							เรามุ่งมั่นที่จะให้บริการรถเช่า เพื่อลูกค้าในราคาที่ย่อมเยาและยืดหยุ่นที่สุด เพราะเรามั่นใจว่าคุณภาพบริการ/รถยนต์ของเรา คุ้มค่าแน่นอน เรามีรถให้เช่าหลากหลายราคาขึ้นอยู่กับการใช้งานของลูกค้า และมีการบริการระดับมืออาชีพ ราคาสบายกระเป๋าแน่นอน มีราคารายวันและราคารายเดือน คุณเองก็สามารถวางแผนได้ว่าจะใช้ระยะเวลาเท่าไหร่ในการเช่า *รายการเช่านี้เป็นราคาขับเอง สนใจคลิก <br> <br>
+						</p>
+					</div>
+				</div>
+	
+			</div>
+	 
+		</section>
+
+	</main>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<img src="public/images/LogoLXBfinal01.png" class="logo">
+				</div>
+				<div class="col-lg-3">
+					<ul>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3">
+					<ul>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+						<li><a href="#">เช่ารถรายวัน</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3">
+					<h4>ติดต่อเรา</h4>
+					<a href="tel:02929922" class="sc">
+						<img src="public/images/c.png" alt=""> 0292992202929922
+					</a>
+					<a href="mailto:email@email.com" class="sc">
+						<img src="public/images/email.png" alt=""> email@email.com
+					</a>
+					<a href="#" class="sc">
+						<img src="public/images/l.png" alt=""> @car_rent
+					</a>
+					<a href="#" class="sc">
+						<img src="public/images/x.webp" alt=""> car_rent
+					</a>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<h6>Copyright ©2020 All rights reserved | www.ecocar.co.th
+
+			</h6>
+		</div>
+	</footer>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	 
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"  ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"  ></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.js-example-basic-multiple').select2();
+		}); 
+
+		$('.date').datepicker({
+			format: 'dd MM yyyy',
+			clearBtn: true, 
+			calendarWeeks: false,
+			autoclose: true,
+			todayHighlight: true,
+			toggleActive: true
+		});
+
+ 
+        var firstOpen = true;
+        var time;
+        $('#timePicker').datetimepicker({
+            useCurrent: false,
+            format: "hh:mm A"
+        }).on('dp.show', function() {
+            if(firstOpen) {
+                time = moment().startOf('day');
+                firstOpen = false;
+            } else {
+                time = "01:00 PM"
+            }        
+            $(this).data('DateTimePicker').date(time);
+        });
+
+
+
+		
+    </script>    
+
+</body>
+</html>
