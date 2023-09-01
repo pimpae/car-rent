@@ -55,7 +55,7 @@ main{
 } 
 .cover-form.hi2{
   height: 300px; 
-}
+} 
 .cover-form::after{
   content: "";
   position: absolute;
