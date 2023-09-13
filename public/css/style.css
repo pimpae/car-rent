@@ -17,19 +17,23 @@ body{
 header .navbar{
   height: 80px;
   background-color: var(--bg-main5);
+  border-top: 4px solid #FFA42F;
 }
 header .navbar .img-responsive{
   height: 60px;
 } 
 header .navbar-nav .nav-item .nav-link{
-  color: var(--bg-main3);
+  color: #f1a180;
   font-size: 18px;
   position: relative;
   margin-left: 15px;
   margin-right: 15px;
 }
 header .navbar-nav .nav-item:hover .nav-link{
-  color: black;
+  color: #F47C64;
+}
+header .navbar-nav .nav-item.active .nav-link{
+  color: #F47C64;
 }
 header .navbar-nav .nav-item .nav-link img{
   height: 30px;
@@ -47,13 +51,26 @@ main{
 }
 .cover-form{
   height: 600px;
+  position: relative;
+} 
+.cover-form .img-pala{
+  position: fixed;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: 100% auto !important;
   background: url(../images/qq.jpg);
-  position: relative;
-} 
+  width: 100%;
+  height: 600px;
+  z-index: 2;
+  transition: .33s all ease-out;  
+}
+.cover-form:hover .img-pala{ 
+  background-size: 104% auto !important; 
+}
 .cover-form.hi2{
+  height: 300px; 
+} 
+.cover-form.hi2 .img-pala{
   height: 300px; 
 } 
 .cover-form::after{
@@ -77,7 +94,7 @@ main{
   height: 300px; 
 }
 .book-box h1{ 
-  color: #fff;
+  color: #FFA42F;
   font-size: 50px; 
   text-align: center;
   margin-bottom: 30px;
@@ -87,31 +104,42 @@ main{
   font-size: 20px;
   text-align: center; 
   margin-bottom: 30px;
-}
-.book-box h4{ 
-  color: #fff;
-  font-size: 20px;
-  text-align: center; 
-}
-.book-box .btn{ 
-  background-color: var(--bg-main); 
-  color: #fff;
-  margin-top: 20px;
-  position: relative;
-  padding: 15px 60px;
+}  
+.book-box .btn {
+  border-radius: 4px;
+  background-color: #F88B6A;
+  border: none;
+  color: #FFFFFF;
   text-align: center;
-  display: block;
-  margin: 20px auto 0px;
-}
-.book-box .btn:hover{ 
-  background-color: var(--bg-main3); 
-  color: #fff; 
-}
-.book-box .btn span{ 
+  font-size: 18px; 
+  padding: 15px 60px;
+  transition: all 0.5s;
+  cursor: pointer; 
   position: relative;
-  top: 5px;
-  font-size: 18px;
-}
+} 
+.book-box .btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s; 
+  position: absolute;
+  font-size: 20px;
+} 
+.book-box .btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+} 
+.book-box .btn:hover span {
+  padding-right: 25px;
+} 
+.book-box .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}  
 .form-car{ 
   /* background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
@@ -172,7 +200,25 @@ main{
 .form-check label{
   margin-top: 0px;
 }
-
+.sec1{
+  z-index: 4;
+  position: relative;
+  background-color: #f9f9f9; 
+}
+.bg1{
+  z-index: 4;
+  position: relative;
+  background-color: #f9f9f9; 
+}
+#about{
+  z-index: 4;
+  position: relative;
+  background-color: #fff; 
+}
+footer{
+  z-index: 4;
+  position: relative; 
+}
 
 .my-car{
   padding-top: 60px;
@@ -273,6 +319,17 @@ footer h6{
   color: #000;
   margin-bottom: 0px;
   padding-bottom: 20px;
+}
+footer .bot{
+  height: 50px;
+  background-color: #FFA42F;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+footer .bot a{
+  text-decoration: underline !important;
+  color: #000;
 }
 .sc{
   color: #000;
