@@ -105,7 +105,7 @@ main{
   text-align: center; 
   margin-bottom: 30px;
 }  
-.book-box .btn {
+.book-box .btn.btnx {
   border-radius: 4px;
   background-color: #F88B6A;
   border: none;
@@ -117,7 +117,7 @@ main{
   cursor: pointer; 
   position: relative;
 } 
-.book-box .btn span {
+.book-box .btn.btnx span {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -125,7 +125,7 @@ main{
   position: absolute;
   font-size: 20px;
 } 
-.book-box .btn span:after {
+.book-box .btn.btnx span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -133,10 +133,10 @@ main{
   right: -20px;
   transition: 0.5s;
 } 
-.book-box .btn:hover span {
+.book-box .btn.btnx:hover span {
   padding-right: 25px;
 } 
-.book-box .btn:hover span:after {
+.book-box .btn.btnx:hover span:after {
   opacity: 1;
   right: 0;
 }  
@@ -170,7 +170,7 @@ main{
   z-index: 10;
   background-color: #fff;
 }   
-.form-car .btn{ 
+.form-car .btn.btnx{ 
   background-color: var(--bg-main);
   display: block;
   width: 100%;
@@ -178,7 +178,7 @@ main{
   margin-top: 20px;
   position: relative;
 }
-.form-car .btn span{ 
+.form-car .btn.btnx span{ 
   position: relative;
   top: 5px;
   font-size: 18px;
@@ -251,6 +251,11 @@ footer{
   height: 200px;
   object-fit: cover;
   display: block;
+  overflow: hidden;
+  transition: .33s all ease-out;  
+}
+.car img:hover{
+  transform: scale(1.05);
 }
 .car .btn{
   background-color: var(--bg-main);
@@ -322,7 +327,7 @@ footer h6{
 }
 footer .bot{
   height: 50px;
-  background-color: #FFA42F;
+  background-color: #fff;
   text-align: center;
   padding-top: 15px;
   font-size: 14px;
@@ -354,6 +359,49 @@ footer .bot a{
   background-color: var(--bg-main5);
 }
 
+.bootstrap-datetimepicker-widget .btn{ 
+  position: relative;
+}
+.bootstrap-datetimepicker-widget .btn span{ 
+  width: 30px;
+  height: 30px;
+}
+.bootstrap-datetimepicker-widget .btn span::after{ 
+  content: "";
+  height: 30px !important;
+  width: 30px !important;
+  position: absolute !important; 
+  top: 10px;
+  left: 0;
+  background: url(../images/keyboard_arrow_down.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  background-position: center !important; 
+}  
+.bootstrap-datetimepicker-widget button[data-action] {
+  background-color: var(--bg-main5) !important;
+  color: #000;
+  border: none;
+}  
+
+.bootstrap-datetimepicker-widget tr:nth-child(1) td:nth-child(1){  
+  transform: rotate(180deg);
+}
+.bootstrap-datetimepicker-widget tr:nth-child(1) td:nth-child(3){  
+  transform: rotate(180deg);
+}
+.bootstrap-datetimepicker-widget .btn:focus{ 
+  box-shadow: none !important;
+  border: none !important;
+}
+.bootstrap-datetimepicker-widget .btn:active{ 
+  box-shadow: none !important;
+  border: none !important;
+}
+.bootstrap-datetimepicker-widget .btn:hover{ 
+  box-shadow: none !important;
+  border: none !important;
+}
 
 
 
@@ -451,4 +499,4 @@ transition: .33s all ease-out;
 .datepicker .today.day{
   background: var(--bg-main2) !important;
   color: #fff !important;
-}
+}  
